@@ -29,5 +29,15 @@ $total_transactions = $stmt->fetchColumn();
 
 	<p>Welcome, <Strong><?php echo htmlspecialchars($_SESSION['username']);?><Strong></p>
 	
+	<hr>
+	
+
+	<h2>Quick State</h2>
+
+	<ul>
+		<li>Total Clients : <strong><?php echo $total_clients;?></strong></li>
+		<li>ToTal_accounts : <strong><?php echo $total_accounts;?></strong></li>
+		<li>total_transactions : <strong><?php echo $total_transactions?></strong></li>
+	</ul>	
 	
 </body>
