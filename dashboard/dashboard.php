@@ -39,5 +39,12 @@ $total_transactions = $stmt->fetchColumn();
 		<li>ToTal_accounts : <strong><?php echo $total_accounts;?></strong></li>
 		<li>total_transactions : <strong><?php echo $total_transactions?></strong></li>
 	</ul>	
-	
+
+
+	<nav>
+    		<a href="/clients/list_clients.php">Clients</a> |
+    		<a href="/accounts/list_accounts.php">Accounts</a> |
+    		<a href="/transactions/list_transactions.php">Transactions</a> |
+    		<a href="/auth/logout.php">Logout</a>
+	</nav>
 </body>
