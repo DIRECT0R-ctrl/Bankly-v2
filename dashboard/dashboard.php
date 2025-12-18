@@ -11,7 +11,7 @@ require_once "../includes/db.php";
 $stmt = $pdo->query("SELECT COUNT(*) FROM clients");
 $total_clients = $stmt->fetchColumn();
 $stmt = $pdo->query("SELECT COUNT(*) FROM accounts");
-$total_accounts = $stmt->fetchcolumn();
+$total_accounts = $stmt->fetchColumn();
 $stmt = $pdo->query("SELECT COUNT(*) FROM transactions");
 $total_transactions = $stmt->fetchColumn();
 ?>
@@ -27,7 +27,7 @@ $total_transactions = $stmt->fetchColumn();
 <body>
 	<h1>Bankly V2 Dashboard</h1>
 
-	<p>Welcome, <Strong><?php echo htmlspecialchars($_SESSION['username']);?><Strong></p>
+	<p>Welcome, <strong><?php echo htmlspecialchars($_SESSION['username']);?><strong></p>
 	
 	<hr>
 	
