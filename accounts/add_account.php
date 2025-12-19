@@ -1,5 +1,7 @@
 <?php
 
+require_once "../templates/header.php";
+
 require_once "../includes/auth.php";
 require_login();
 require_once "../includes/db.php";
@@ -38,7 +40,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     exit;
 }
 ?>
-
+<?php require_once "../templates/header.php";
+?>
 <h1>Add Bank Account</h1>
 
 <form method="post" action="add_account.php">
@@ -61,3 +64,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     <button type="submit">Create Account</button>
 </form>
+
+<?phprequire_once "../templates/footer.php";
+ ?>

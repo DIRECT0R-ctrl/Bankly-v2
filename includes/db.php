@@ -1,13 +1,22 @@
-$host = "localhost";
+<?php
+$host = "127.0.0.1";
 $dbname = "bankly";
-$user = "postgres";
-$password = "postgres";
+$user = "bankly_user";
+$password = "bankly_pass";
 
 try {
 	$pdo = new PDO(
 		// data source name
 		"pgsql:host=$host;dbname=$dbname",
+		$user,
+		$password
 	);
-} catch {
 
+	$pdo->setAttribute(
+		PDO::ATTR_ERRMODE, 
+		PDO::ERRMODE_EXCEPTION
+	);
+} catch (PDOException $exception){
+	die("Dtabase connection failed : " . $exception->getMessage());
 }
+?>
