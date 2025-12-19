@@ -1,4 +1,5 @@
 <?php
+
 require_once "../includes/auth.php";
 require_login();
 require_once "../includes/db.php";
@@ -14,15 +15,24 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $account_type = $_POST['account_type'];
     $balance = floatval($_POST['balance']);
 	
+    if (!is_numeric($balance)) {
+    	die("Balance must be numeric");
+    }    
+	
+    $balance = (float) $balance;
+
+    if (abs($balance) >= 120023957483832756) {
+    	die("Blance exceeds allowed limit");
+    }
+
     $account_number = uniqid("ACC-");
     
-    $stmt = $pdo->prepare("INSERT INTO accounts (client_id,account_number, type, balance) VALUES (?, ?, ?)");
+    $stmt = $pdo->prepare("INSERT INTO accounts (client_id,account_number, type, balance) VALUES (?, ?, ?, ?)");
     $stmt->execute([
 	    $client_id,
 	    $account_number, 
 	    $account_type, 
 	    $balance]);
-
     
     header("Location: list_accounts.php");
     exit;
