@@ -57,6 +57,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 ?>
 
+
+<?php 
+require_once "../templates/header.php";
+?>
+
 <h1>Make Transaction</h1>
 
 <?php if ($message): ?>
@@ -95,4 +100,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <a href="/transactions/make_transaction.php">make a transactions</a> |
     <a href="/auth/logout.php">Logout</a>
 </nav>
+<?php
+require_once "../templates/footer.php";
+?>
 
