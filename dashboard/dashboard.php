@@ -20,9 +20,9 @@ $total_transactions = $stmt->fetchColumn();
 <html lang=en>
 
 <head>
+<link rel="stylesheet" href="/public/css/style.css">
 	<meta charset="UTF-8">
 	<title>DashBoard - Bankly V2</title>
-	<link rel="stylesheet" href="/public/css/style.css">
 </head>
 <body>
 	<h1>Bankly V2 Dashboard</h1>
