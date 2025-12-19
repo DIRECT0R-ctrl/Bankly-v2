@@ -7,7 +7,8 @@ $clients = $pdo->query(
     "SELECT id, full_name, email FROM clients ORDER BY id DESC"
 )->fetchAll(PDO::FETCH_ASSOC);
 ?>
-
+<?php require_once "../templates/header.php";
+?>
 <h1>Clients</h1>
 <a href="add_client.php">+ Add Client</a>
 
@@ -31,3 +32,14 @@ $clients = $pdo->query(
 <?php endforeach; ?>
 </table>
 
+<br>
+
+<nav>
+    <a href="/clients/list_clients.php">Clients</a> |
+    <a href="/accounts/list_accounts.php">Accounts</a> |
+    <a href="/transactions/list_transactions.php">Transactions</a> |
+    <a href="/auth/logout.php">Logout</a>
+</nav>
+
+<?php require_once "../templates/footer.php";
+?>
