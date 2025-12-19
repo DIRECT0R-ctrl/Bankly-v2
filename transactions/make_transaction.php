@@ -85,3 +85,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     <button type="submit">Submit</button>
 </form>
+
+<br>
+
+<nav>
+    <a href="/dashboard/dashboard.php">Dashboard</a> |
+    <a href="/clients/list_clients.php">Clients</a> |
+    <a href="/accounts/list_accounts.php">Accounts</a> |
+    <a href="/transactions/make_transaction.php">make a transactions</a> |
+    <a href="/auth/logout.php">Logout</a>
+</nav>
+
