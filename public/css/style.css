@@ -5,4 +5,18 @@
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+    background-color: #1e1e1e;    
+    color: #f0f0f0;          
+    line-height: 1.6;
+    padding: 20px;
+}
+
+
+h1, h2, h3 {
+    color: #f0f0f0;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
 
