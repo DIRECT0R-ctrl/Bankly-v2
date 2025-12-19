@@ -11,8 +11,11 @@ $stmt = $pdo->query("
 $accounts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
+<?php require_once "../templates/header.php"; ?>
 <h1>Accounts</h1>
-<a href="add_account.php">+ Add Account</a>
+<a href="add_account.php" style="line-height: 2;">+ Add Account</a>
+
+<br>
 
 <table border="1">
     <tr>
@@ -36,3 +39,12 @@ $accounts = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <?php endforeach; ?>
 </table>
 
+<br>
+
+<nav>
+    <a href="/clients/list_clients.php">Clients</a> |
+    <a href="/accounts/list_accounts.php">Accounts</a> |
+    <a href="/transactions/list_transactions.php">Transactions</a> |
+    <a href="/auth/logout.php">Logout</a>
+</nav>
+<?php require_once "../templates/footer.php"; ?>
